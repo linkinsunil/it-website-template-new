@@ -30,7 +30,7 @@ body {
 .container {
     display: flex;
     justify-content: space-between;
-    border: 1px solid var(--black-color);
+    border: 1px solid var(--white-color);
 }
 
 /* brand */
@@ -91,4 +91,21 @@ body {
 .link_nav:hover:before,
 .link_nav:hover:after {
     width: 100%;
+}
+
+/* content */
+.section{
+    margin: auto;
+    height: 80vh;
+    width: 80vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+/* temporary */
+span {
+    color: var(--primary-color);
+    /* font-weight:900; */
+    font-size: 1.7rem;
 }
