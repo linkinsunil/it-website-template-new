@@ -1,16 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
+:root {
+    --primary-color: #7C3AED;
+    --grey-color: #D1D5DB;
+    --white-color: #ffffff;
+    --black-color: #000000;
+}
 
-
-body{
-    background-color: black;
-    color: white;
+body {
+    background-color: var(--black-color);
+    color: var(--white-color);
     margin: 0px;
     font-family: 'Montserrat', sans-serif;
 }
-.container::before{
+
+.container::before {
     background: url("https://source.unsplash.com/1600x900/?programming,coding");
-    content:"";
+    content: "";
     position: absolute;
     top: 0px;
     left: 0px;
@@ -19,33 +25,70 @@ body{
     opacity: 0.3;
     z-index: -1;
 }
-.container{
+
+/* header - containing brand and navbar */
+.container {
     display: flex;
     justify-content: space-between;
-    border: 1px solid black;
+    border: 1px solid var(--black-color);
 }
-.brand{
+
+/* brand */
+.brand {
     margin: 0rem 2rem;
 }
-.navbar{
-    margin:0rem;
+
+/* navbar */
+.navbar {
+    margin: 0rem;
 }
-.navigation{
+
+/* navigation(ul) - inside navbar */
+.navigation {
     display: flex;
     list-style: none;
     margin-top: 2rem;
-    /* margin-right: 2rem */
+    margin-right: 2rem;
 }
-.link{
+
+/* links(li>a) in navigation(ul) */
+.link {
     text-decoration: none;
-    color: white;
+    color: var(--white-color);
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 12px 30px 10px;
+    position: relative;
 }
-.link_nav{
-    margin: 0rem 1.5rem 0rem 1.5rem;
-    padding-bottom: .5rem;
+
+.link_nav:before,
+.link_nav:after {
+    border: 0 solid transparent;
+    transition: all 0.3s;
+    content: '';
+    height: 0;
+    position: absolute;
+    width: 0px;
+}
+
+.link_nav {
     font-size: 1rem;
 }
-li .link:hover{
-    border-bottom:4px solid #8950e6;
-    color: #6D28D9;
+
+.link_nav:before {
+    border-top: 1px solid var(--white-color);
+    right: 0;
+    top: -4px;  
+}
+
+.link_nav:after {
+    border-bottom: 1px solid var(--white-color);
+    bottom: -4px;
+    left: 0;
+}
+
+.link_nav:hover:before,
+.link_nav:hover:after {
+    width: 100%;
 }
