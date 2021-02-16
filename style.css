@@ -13,9 +13,9 @@ body {
     margin: 0px;
     font-family: 'Montserrat', sans-serif;
 }
-
+/* for semi-transparent background image on pseudo class */
 .container::before {
-    background: url("https://source.unsplash.com/1600x900/?programming,coding");
+    background: url("https://source.unsplash.com/1600x900/?coding") no-repeat center center/cover;
     content: "";
     position: absolute;
     top: 0px;
@@ -30,7 +30,7 @@ body {
 .container {
     display: flex;
     justify-content: space-between;
-    border: 1px solid var(--white-color);
+    /* border: 1px solid var(--white-color); */
 }
 
 /* brand */
@@ -93,6 +93,11 @@ body {
     width: 100%;
 }
 
+/* Active page */
+.active{
+    font-weight: bolder;
+}
+
 /* content */
 .section{
     margin: auto;
@@ -104,8 +109,6 @@ body {
     flex-direction: column;
 }
 /* temporary */
-span {
+.highlighted_text {
     color: var(--primary-color);
-    /* font-weight:900; */
-    font-size: 1.7rem;
 }
